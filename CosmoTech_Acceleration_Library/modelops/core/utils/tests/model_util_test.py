@@ -2,7 +2,7 @@
 # Licensed under the MIT license.
 import unittest
 
-from CosmoTech_Acceleration_Library.Modelops.core.utils.model_util import ModelUtil
+from CosmoTech_Acceleration_Library.modelops.core.utils.model_util import ModelUtil
 
 
 class TestModelUtil(unittest.TestCase):

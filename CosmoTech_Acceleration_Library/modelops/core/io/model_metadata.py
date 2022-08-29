@@ -3,10 +3,11 @@
 import logging
 from datetime import datetime
 
-from CosmoTech_Acceleration_Library.Modelops.core.common.redis_handler import RedisHandler
-from CosmoTech_Acceleration_Library.Modelops.core.utils.model_util import ModelUtil
+from CosmoTech_Acceleration_Library.modelops.core.common.redis_handler import RedisHandler
+from CosmoTech_Acceleration_Library.modelops.core.utils.model_util import ModelUtil
 
 logger = logging.getLogger(__name__)
+
 
 class ModelMetadata(RedisHandler):
     """

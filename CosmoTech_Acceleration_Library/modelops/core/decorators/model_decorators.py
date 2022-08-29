@@ -2,7 +2,7 @@
 # Licensed under the MIT license.
 import functools
 
-from CosmoTech_Acceleration_Library.Modelops.core.common.graph_handler import GraphHandler, ExportableGraphHandler
+from CosmoTech_Acceleration_Library.modelops.core.common.graph_handler import GraphHandler, ExportableGraphHandler
 
 
 def update_last_version(function):
