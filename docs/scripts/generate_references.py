@@ -1,3 +1,4 @@
+from pprint import pprint
 import mkdocs_gen_files
 import os
 from griffe.dataclasses import Kind
@@ -27,12 +28,14 @@ def yield_module_member(module: Module) -> list:
 depth = 1
 parents = {}
 for identifier in yield_module_member(griffed_module):
+    print(identifier)
     parent, *sub = identifier.rsplit('.', depth)
     _, parent = parent.split('.', 1)  # remove module name
     if parent not in parents.keys():
         parents[parent] = set()
     parents[parent].add(sub[0])
 
+pprint(parents)
 # gen md files
 with open('docs/scripts/generic_ref.md.template') as f:
     generic_template_ref = f.read()
@@ -53,3 +56,6 @@ for nav, file_set in parents.items():
 
 with mkdocs_gen_files.open("references/SUMMARY.md", "w") as nav_file:
     nav_file.writelines(mk_nav.build_literate_nav())
+
+for n in mk_nav.items():
+    pprint(n)
